@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Grid Responsif</title>
+  <style>
+    /* Gaya default untuk desktop */
+    body {
+      background-color: lightblue;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk desktop */
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background-color: #2196F3;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    /* Jika layar maksimal 600px (misal smartphone) */
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: lightcoral;
+        font-size: 14px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+  </div>
+</body>
+</html>
